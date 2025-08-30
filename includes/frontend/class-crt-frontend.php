@@ -26,9 +26,6 @@ final class Frontend {
 			return;
 		}
 
-		// Enqueue base styles for the reading time text.
-		wp_enqueue_style( 'crt-frontend-style', CRT_URL . 'assets/css/frontend.css', [], CRT_VER );
-
 		// Enqueue progress bar script if it's enabled.
 		if ( ! empty( $this->settings['progress_enabled'] ) ) {
 			wp_enqueue_script( 'crt-frontend', CRT_URL . 'assets/js/frontend.js', [], CRT_VER, true );
@@ -103,6 +100,10 @@ final class Frontend {
 		echo '<div class="crt-progress-bar-container" style="position:fixed; top:0; left:0; width:100%; height:' . $height . 'px; background-color:' . $bg_color . '; z-index:99998;"></div>';
 		// The bar itself, which will grow in width on scroll.
 		echo '<div class="crt-progress-bar" style="position:fixed; top:0; left:0; width:0; height:' . $height . 'px; background-color:' . $color . '; z-index:99999;"></div>';
+
+		//enqueue the css file
+		wp_enqueue_style( 'crt-frontend', CRT_URL . 'assets/css/frontend.css', [], CRT_VER );
+	
 	}
 
 	/** Checks if the current view is a singular post of a supported type. */
