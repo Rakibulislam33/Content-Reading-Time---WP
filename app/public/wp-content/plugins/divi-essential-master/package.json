@@ -1,0 +1,63 @@
+{
+  "name": "divi-essential",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.42",
+    "bodymovin": "^4.13.0",
+    "divi-scripts": "1.0.2-rc.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-masonry-css": "^1.0.16",
+    "react-responsive-tabs": "^4.4.3",
+    "sass": "^1.77.8",
+    "swiper": "^5.4.5"
+  },
+  "resolutions": {
+    "@babel/runtime": "7.0.0-beta.55"
+  },
+  "scripts": {
+    "start": "divi-scripts start",
+    "clean": "gulp cleanjsx",
+    "minify": "gulp assets",
+    "gulpzip": "gulp zip",
+    "build": "divi-scripts build",
+    "minifyModuleCss": "gulp minifyModuleCss",
+    "minifyAssetsCss": "gulp minifyAssetsCss",
+    "minifyStyleCss": "gulp minifyStyleCss",
+    "minifyBuilderCss": "gulp minifyBuilderCss",
+    "minifyCss": "yarn minifyModuleCss && yarn minifyAssetsCss && yarn minifyStyleCss && yarn minifyBuilderCss",
+    "finalbuild": "divi-scripts build && yarn clean && yarn minify && yarn minifyCss",
+    "finalbuildzip": "yarn finalbuild && yarn gulpzip",
+    "zip": "divi-scripts build && divi-scripts zip",
+    "eject": "divi-scripts eject"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
+  },
+  "cde": {
+    "gettext": "dnxte-divi-essential",
+    "prefix": "dnxte"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-remove-logging": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0"
+  }
+}

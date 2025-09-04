@@ -1,0 +1,29 @@
+name: PHPCS Check
+
+on: [workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Clone Marketplace PHPCS Repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: "hrrarya"
+          repository: "marketplace-phpcs"
+
+      - name: Install Composer dependencies
+        run: |
+          cd ./marketplace-phpcs 
+          composer install
+
+      - name: Running PHPCS
+        run: |
+          cd marketplace-phpcs
+          bash ./simple-check.sh

@@ -1,0 +1,1 @@
+[19-Nov-2024 14:54:50 UTC] PHP Warning:  Cannot modify header information - headers already sent in /Users/rakibulislam/Local Sites/plugin-development/app/public/wp-includes/load.php on line 386

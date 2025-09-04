@@ -1,0 +1,37 @@
+.crt-getting-started {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 920px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.crt-getting-started h2 {
+    margin: .2rem 0 1rem;
+    font-size: 1.25rem
+}
+
+.crt-getting-started ol {
+    margin: 0 0 1rem 1.2rem
+}
+
+.crt-getting-started li {
+    margin: .5rem 0
+}
+
+.crt-getting-started ul {
+    margin: .35rem 0 .75rem 1.1rem;
+    list-style: disc
+}
+
+.crt-getting-started code {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: .1rem .35rem
+}
+
+.crt-gs-foot {
+    margin-top: 1rem
+}

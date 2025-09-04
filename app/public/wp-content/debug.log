@@ -1,0 +1,8 @@
+[26-Aug-2025 14:29:05 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class "RI_CFP_Activator" not found in /Users/rakibulislam/Local Sites/plugin-development/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/rakibulislam/Local Sites/plugin-development/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 /Users/rakibulislam/Local Sites/plugin-development/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/rakibulislam/Local Sites/plugin-development/app/public/wp-admin/includes/plugin.php(703): do_action('activate_ri-cfp...', false)
+#3 /Users/rakibulislam/Local Sites/plugin-development/app/public/wp-admin/plugins.php(60): activate_plugin('ri-cfp/ri-cfp.p...', 'http://localhos...', false)
+#4 {main}
+  thrown in /Users/rakibulislam/Local Sites/plugin-development/app/public/wp-includes/class-wp-hook.php on line 324

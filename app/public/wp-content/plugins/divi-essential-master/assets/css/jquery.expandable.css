@@ -1,0 +1,77 @@
+.expandable {
+    transition: all 250ms ease-in-out;
+}
+
+.expandable .expand-bar {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1;
+}
+
+a .expandable .expand-bar::before {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -20px;
+    left: 0px;
+    display: block;
+    content: "";
+    background: rgba(237, 237, 237, 0);
+    background: -moz-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, rgba(255, 255, 255, 1) 70%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237, 237, 237, 0)), color-stop(41%, rgba(255, 255, 255, 0.8)), color-stop(70%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, rgba(255, 255, 255, 1) 70%);
+    background: -o-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, rgba(255, 255, 255, 1) 70%);
+    background: -ms-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, rgba(255, 255, 255, 1) 70%);
+    background: linear-gradient(to bottom, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, rgba(255, 255, 255, 1) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff', GradientType=0);
+}
+
+.expandable .expand-bar i::before,
+.expandable .expand-bar i::after {
+    font-family: ETmodules;
+    speak: none;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+}
+
+.expandable .expand-bar i::before {
+    content: '\33';
+}
+
+.expandable.expanded .expand-bar i::before {
+    display: none;
+}
+
+.expandable.expanded .expand-bar i::after {
+    display: inline-flex !important;
+}
+
+.expandable .expand-bar i::after {
+    content: '\32';
+}
+
+.expandable .expand-bar i::after {
+    display: none;
+}
